@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zatrucia – BHP Edukacja</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: #0074cc;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #005ea2;
+        }
+
+        nav button {
+            margin: 10px;
+            padding: 10px 20px;
+            background: white;
+            color: #005ea2;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background: #cce5ff;
+        }
+
+        section {
+            display: none;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #0074cc;
+        }
+
+        footer {
+            background: #0074cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Zatrucia – Wiedza BHP</h1>
+        <p>Kompleksowe informacje o zatruciach, objawach, leczeniu i profilaktyce</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('wstep')">Wprowadzenie</button>
+        <button onclick="showSection('rodzaje')">Rodzaje zatruć</button>
+        <button onclick="showSection('objawy')">Objawy</button>
+        <button onclick="showSection('leczenie')">Leczenie i diagnostyka</button>
+        <button onclick="showSection('pomoc')">Pierwsza pomoc</button>
+        <button onclick="showSection('profilaktyka')">Profilaktyka</button>
+        <button onclick="showSection('zrodla')">Źródła</button>
+    </nav>
+
+    <main>
+        <section id="wstep" class="active">
+            <h2>Wprowadzenie</h2>
+            <p>Zatrucia to stany chorobowe wywołane działaniem szkodliwych substancji, które dostały się do organizmu
+                drogą pokarmową, oddechową, przez skórę lub wstrzyknięcie. Mogą być przypadkowe lub celowe, ostre lub
+                przewlekłe. Szybka reakcja oraz znajomość objawów może uratować życie.</p>
+        </section>
+
+        <section id="rodzaje">
+            <h2>Rodzaje zatruć</h2>
+            <ul>
+                <li><strong>Zatrucie pokarmowe:</strong> bakterie (Salmonella, E. coli), toksyny (np. grzyby)</li>
+                <li><strong>Zatrucie chemiczne:</strong> środki czystości, pestycydy, metale ciężkie</li>
+                <li><strong>Zatrucie gazami:</strong> tlenek węgla (czad), gazy przemysłowe</li>
+                <li><strong>Zatrucie lekami:</strong> przedawkowanie, niewłaściwe stosowanie</li>
+                <li><strong>Zatrucie alkoholowe:</strong> alkohol etylowy, metanol, alkohol izopropylowy</li>
+                <li><strong>Zatrucie przez skórę:</strong> kontakt z substancjami toksycznymi</li>
+            </ul>
+        </section>
+
+        <section id="objawy">
+            <h2>Objawy zatruć</h2>
+            <p>Objawy zależą od rodzaju trucizny, drogi wniknięcia do organizmu i dawki. Najczęstsze to:</p>
+            <ul>
+                <li>Wymioty, biegunka, nudności</li>
+                <li>Bóle brzucha, głowy</li>
+                <li>Osłabienie, zawroty głowy, senność</li>
+                <li>Problemy z oddychaniem, przyspieszony puls</li>
+                <li>Zaburzenia świadomości, halucynacje, utrata przytomności</li>
+                <li>Drgawki, śpiączka (ciężkie przypadki)</li>
+            </ul>
+        </section>
+
+        <section id="leczenie">
+            <h2>Leczenie i diagnostyka</h2>
+            <p>Leczenie zatrucia zależy od jego rodzaju. Kluczowe kroki:</p>
+            <ol>
+                <li><strong>Wywiad i rozpoznanie:</strong> identyfikacja substancji, objawów i drogi wniknięcia</li>
+                <li><strong>Płukanie żołądka:</strong> tylko w określonych przypadkach</li>
+                <li><strong>Podanie węgla aktywowanego:</strong> w celu związania toksyn</li>
+                <li><strong>Podanie antidotum:</strong> np. N-acetylocysteina przy zatruciu paracetamolem</li>
+                <li><strong>Intensywna terapia:</strong> respirator, kroplówki, dializa (w ciężkich przypadkach)</li>
+            </ol>
+        </section>
+
+        <section id="pomoc">
+            <h2>Pierwsza pomoc</h2>
+            <p>W przypadku podejrzenia zatrucia:</p>
+            <ul>
+                <li>Sprawdź stan poszkodowanego (przytomność, oddech)</li>
+                <li>Wezwij pomoc – numer alarmowy 112</li>
+                <li>Nie prowokuj wymiotów bez konsultacji</li>
+                <li>Zachowaj próbkę substancji (opakowanie, resztki)</li>
+                <li>W przypadku zatrucia gazem – wynieś osobę na świeże powietrze</li>
+            </ul>
+        </section>
+
+        <section id="profilaktyka">
+            <h2>Profilaktyka</h2>
+            <ul>
+                <li>Przechowuj chemikalia poza zasięgiem dzieci</li>
+                <li>Nie mieszaj środków czyszczących</li>
+                <li>Jedz tylko świeże i odpowiednio przechowywane produkty</li>
+                <li>Stosuj leki zgodnie z zaleceniami</li>
+                <li>Używaj czujników czadu w domu</li>
+                <li>Unikaj spożywania nieznanych grzybów lub alkoholi niewiadomego pochodzenia</li>
+            </ul>
+        </section>
+
+        <section id="zrodla">
+            <h2>Źródła i podsumowanie</h2>
+            <p>Informacje opracowane na podstawie danych z:</p>
+            <ul>
+                <li>Głównego Inspektoratu Sanitarnego</li>
+                <li>Ministerstwa Zdrowia</li>
+                <li>WHO – World Health Organization</li>
+                <li>Literatury medycznej z zakresu toksykologii</li>
+            </ul>
+            <p><strong>Pamiętaj:</strong> zatrucie to stan zagrożenia życia. Nie zwlekaj z pomocą!</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Zatrucia BHP | Edukacja i bezpieczeństwo | Stworzone przez: K. Pelcel oraz M. Smyrak
+    </footer>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
